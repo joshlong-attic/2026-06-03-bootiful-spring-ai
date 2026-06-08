@@ -41,7 +41,7 @@
 		<dependency>
 			<groupId>org.springaicommunity</groupId>
 			<artifactId>mcp-authorization-server-spring-boot</artifactId>
-			<version>0.1.11</version>
+			<version>0.1.12</version>
 		</dependency>
 
 		<dependency>

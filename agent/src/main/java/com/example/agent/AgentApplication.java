@@ -56,7 +56,7 @@ class AssistantController {
             VectorStore vectorStore,
             ChatClient.Builder ai) {
 
-        if (false) {
+        if (true) {
             repository.findAll().forEach(dog -> {
                 var dogument = new Document("id: %s, name: %s, description: %s".formatted(
                         dog.id(), dog.name(), dog.description()));
@@ -69,8 +69,7 @@ class AssistantController {
                 .build();
         this.ai = ai
                 .defaultAdvisors(questionAnswerAdvisor)
-                .defaultToolCallbacks(st)
-                .defaultToolCallbacks(toolCallbackProvider)
+                .defaultTools(st,toolCallbackProvider)
                 .defaultSystem("""
                         You are an AI powered assistant to help people adopt a dog from the adoptions agency named Pooch Palaces
                         with locations in Antwerp, Seoul, Tokyo, Singapore, Paris, Mumbai, New Delhi, Barcelona, San Francisco,s
